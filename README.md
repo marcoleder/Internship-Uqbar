@@ -214,6 +214,16 @@ Today I finished both app school I and II, leaving all "catching up & learning" 
 - Started on implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
 
 #### TDT:
-- Finish implemetation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring, %submit-custom, %submit-signed and %submit arms
+- Finish implemetation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring, %submit-custom, %submit-signed and %submit sections
 
 ## Week 3
+
+### Day 11
+My day consisted mostly of continuing my work on refactoring [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) and focusing on the duplicated code in %submit-custom, %submit-signed and %submit sections. A fraction of my time was also dedicated towards fixing my display issues such that I can work on my big monitor again. Overall I think I am on track and can have the refactoring finished by wednesday. Furthermore, I had a quick talk with my university about remote work, which they thankfully approved.
+#### CT:
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- Troubleshooted linux display xrandr
+- Email conversation with university concering remote work setting
+
+#### TDT:
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
