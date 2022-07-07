@@ -227,3 +227,12 @@ My day consisted mostly of continuing my work on refactoring [wallet.hoon](https
 
 #### TDT:
 - Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+
+### Day 12
+I am working out the following idea of %give and %give-nft - basically unify all computation in one block with the use of placeholder variables. Simply save different stuff in these variables, based on if it is one or the other. That way I can drastically reduce the size of the repetitive code and ensure more readable code, since all execution will be condensed where just the content of the variables changes. Problem though: Come up with informative variable naming.
+#### CT:
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- [First commit](https://github.com/uqbar-dao/ziggurat/commit/27f2a11fc6017157043e9313a45d56e00e270d3b)
+
+#### TDT:
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
