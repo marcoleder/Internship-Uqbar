@@ -236,3 +236,13 @@ I am working out the following idea of %give and %give-nft - basically unify al
 
 #### TDT:
 - Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+
+### Day 13
+Continued with resolving the syntax error, got it mostly in control (or in other words: I was able to move the syntax error further down in the code). Still need to completely fix it though before I can work on the actual scry of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon). Had a quick chat with `~hodzod-walrus` about how everything is looking so far, if I am feeling at place in the company and he also quickly helped me spot the error in my code, thx! Furthermore, just attended urbit fireside chat, was fun and a good insight into what is going on at the moment.
+#### CT:
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- [Second commit](https://github.com/uqbar-dao/ziggurat/commit/15ea4bf1f5e99fedc74aa61bda51390518952a00)
+- Met with `~hodzod-walrus`
+
+#### TDT:
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
