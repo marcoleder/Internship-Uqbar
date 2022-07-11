@@ -246,3 +246,33 @@ Continued with resolving the syntax error, got it mostly in control (or in other
 
 #### TDT:
 - Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+
+### Day 14
+Worked on condensing the repetitive part (see below). I was thinking of having this like a "function" where each poke will simply call it in the end. That way I would only have to write the actual hashing & sending of the transaction once and then simply call this function everytime we need to send something. The same applies to writing/submitting the TX.
+#### CT:
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- Researched possible ways on how to fix the syntax error, no solution yet
+
+#### TDT:
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+```
+=+  egg-hash=(hash-egg egg.p)
+      =/  our-txs
+        ?~  o=(~(get by transaction-store) from)
+          [(malt ~[[egg-hash [egg.p args.p]]]) ~]
+        u.o(sent (~(put by sent.u.o) egg-hash [egg.p args.p]))
+      ~&  >>  "%wallet: submitting self-signed tx"
+      ~&  >>  "with eth-hash {<eth-hash.act>}"
+      ~&  >>  "with signature {<v.sig.act^r.sig.act^s.sig.act>}"
+      :_  %=  state
+            pending  ~
+            transaction-store  (~(put by transaction-store) from our-txs)
+          ==
+      :~  (tx-update-card egg.p `args.p)
+          :*  %pass  /submit-tx/(scot %ux egg-hash)
+              %agent  [our.bowl %uqbar]
+              %poke  %uqbar-write
+              !>(`write:uqbar`[%submit egg.p])
+          ==
+      ==
+```
