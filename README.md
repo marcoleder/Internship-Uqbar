@@ -276,3 +276,38 @@ Worked on condensing the repetitive part (see below). I was thinking of having 
           ==
       ==
 ```
+
+## Week 4
+
+### Day 15
+Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) on the same part as yesterday. Furthermore started with sketching out an idea on how to get rid of the duplicated lines 205-226 === 296-307 (see below). However, have not started with implementing the latter but will hope to be able to do so tomorrow. Finally, I have spent some time to get the language server (LSP) working with `~littel-wolfur` helping me once more, again, thx for your time!
+#### CT:
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- Fixing language server in VScode
+- Sketching out idea for further refactoring tasks
+
+#### TDT:
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+```
+=/  keypair        (~(got by keys.state) from.act)
+      =/  =egg:smart
+        :_  yolk
+        :*  caller
+            ?~  priv.keypair
+              [0 0 0]
+            %+  ecdsa-raw-sign:secp256k1:secp:crypto
+              (sham yolk)
+            u.priv.keypair
+            ~
+            to.act
+            rate.gas.act
+            bud.gas.act
+            town.act
+            status=%100
+        ==
+      ?~  priv.keypair
+        ::  if we don't have private key for this address, set as pending
+        ::  and allow frontend to sign with HW wallet or otherwise
+        ~&  >>  "%wallet: storing unsigned tx"
+        `state(pending `[(sham yolk) egg [%custom args.act]])
+```
