@@ -311,3 +311,12 @@ Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ma
         ~&  >>  "%wallet: storing unsigned tx"
         `state(pending `[(sham yolk) egg [%custom args.act]])
 ```
+
+### Day 16
+What an absolute amazing day today has been! I was able to get the hoon-language-server working, finally! Yeah, I might have spent the whole day figuring out some LSP stuff, but in the end I now have a working language server for wallet.hoon which will definitely help me with my future coding tasks! While configuring I also quickly read the [mill-explainer](https://gist.github.com/dr-frmr/6d3a19f77ae87f7c21c5c3b9486fbe77) by `~hodzod-walrus` which helped to clear some questions.
+#### CT:
+- Finished (!) language server setup in VScode, thx `~littel-wolfur`
+- Read through [mill-explainer](https://gist.github.com/dr-frmr/6d3a19f77ae87f7c21c5c3b9486fbe77) by `~hodzod-walrus`
+
+#### TDT:
+- Work on implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) again
