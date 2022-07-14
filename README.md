@@ -248,7 +248,7 @@ Continued with resolving the syntax error, got it mostly in control (or in other
 - Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
 
 ### Day 14
-Worked on condensing the repetitive part (see below). I was thinking of having this like a "function" where each poke will simply call it in the end. That way I would only have to write the actual hashing & sending of the transaction once and then simply call this function everytime we need to send something. The same applies to writing/submitting the TX.
+Worked on condensing the repetitive part (see below). I was thinking of having this like a "function" where each poke will simply call it in the end. That way I would only have to write the actual hashing & sending of the transaction once and then simply call this gate everytime we need to send something. The same applies to writing/submitting the TX. These would clear out the redundancy in line 227-243 and 308-325.
 #### CT:
 - Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
 - Researched possible ways on how to fix the syntax error, no solution yet
