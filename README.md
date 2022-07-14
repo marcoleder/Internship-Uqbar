@@ -280,7 +280,7 @@ Worked on condensing the repetitive part (see below). I was thinking of having 
 ## Week 4
 
 ### Day 15
-Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) on the same part as yesterday. Furthermore started with sketching out an idea on how to get rid of the duplicated lines 205-226 === 296-307 (see below). However, have not started with implementing the latter but will hope to be able to do so tomorrow. Finally, I have spent some time to get the language server (LSP) working with `~littel-wolfur` helping me once more, again, thx for your time!
+Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) on the same part as on Day 14. Furthermore started with sketching out an idea on how to get rid of the duplicated lines 205-226 === 296-307 (see below). However, have not started with implementing the latter but will hope to be able to do so tomorrow. Finally, I have spent some time to get the language server (LSP) working with `~littel-wolfur` helping me once more, again, thx for your time!
 #### CT:
 - Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
 - Fixing language server in VScode
@@ -320,3 +320,13 @@ What an absolute amazing day today has been! I was able to get the hoon-langua
 
 #### TDT:
 - Work on implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) again
+
+### Day 17
+I got rid of the syntax errors in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) and finished condensing the part from the day before yesterday. Furthermore, I started with eliminating the duplicated lines 205-226 === 296-307 but am not finished yet. The [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) now works as described in the [draft PR](https://github.com/uqbar-dao/ziggurat/pull/96). What still needs to be done is the last fragment of duplicated code, lines 200-203 === 253-257, and the keypair part.
+#### CT:
+- Finished condensing the `=+  egg-hash=(hash-egg egg.p)` part
+- [Third commit](https://github.com/uqbar-dao/ziggurat/pull/96/commits/4cc60ce7da4bd055eb7dbcdd36d7b6ca0c6ae99e)
+- [Fourth commit](https://github.com/uqbar-dao/ziggurat/pull/96/commits/671d588f3ec5f4ab2357a2e51a61545af94636cd)
+
+#### TDT:
+- Work out implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) for `=/  keypair        (~(got by keys.state) from.act)`
