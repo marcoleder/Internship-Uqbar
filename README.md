@@ -231,30 +231,30 @@ My day consisted mostly of continuing my work on refactoring [wallet.hoon](https
 ### Day 12
 I am working out the following idea of %give and %give-nft - basically unify all computation in one block with the use of placeholder variables. Simply save different stuff in these variables, based on if it is one or the other. That way I can drastically reduce the size of the repetitive code and ensure more readable code, since all execution will be condensed where just the content of the variables changes. Problem though: Come up with informative variable naming.
 #### CT:
-- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) refactoring
 - [First commit](https://github.com/uqbar-dao/ziggurat/commit/27f2a11fc6017157043e9313a45d56e00e270d3b)
 
 #### TDT:
-- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
 
 ### Day 13
-Continued with resolving the syntax error, got it mostly in control (or in other words: I was able to move the syntax error further down in the code). Still need to completely fix it though before I can work on the actual scry of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon). Had a quick chat with `~hodzod-walrus` about how everything is looking so far, if I am feeling at place in the company and he also quickly helped me spot the error in my code, thx! Furthermore, just attended urbit fireside chat, was fun and a good insight into what is going on at the moment.
+Continued with resolving the syntax error, got it mostly in control (or in other words: I was able to move the syntax error further down in the code). Still need to completely fix it though before I can work on the actual scry of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon). Had a quick chat with `~hodzod-walrus` about how everything is looking so far, if I am feeling at place in the company and he also quickly helped me spot the error in my code, thx! Furthermore, just attended urbit fireside chat, was fun and a good insight into what is going on at the moment.
 #### CT:
-- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) refactoring
 - [Second commit](https://github.com/uqbar-dao/ziggurat/commit/15ea4bf1f5e99fedc74aa61bda51390518952a00)
 - Met with `~hodzod-walrus`
 
 #### TDT:
-- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
 
 ### Day 14
 Worked on condensing the repetitive part (see below). I was thinking of having this like a "function" where each poke will simply call it in the end. That way I would only have to write the actual hashing & sending of the transaction once and then simply call this gate everytime we need to send something. The same applies to writing/submitting the TX. These would clear out the redundancy in line 227-243 and 308-325.
 #### CT:
-- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) refactoring
 - Researched possible ways on how to fix the syntax error, no solution yet
 
 #### TDT:
-- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
 ```
 =+  egg-hash=(hash-egg egg.p)
       =/  our-txs
@@ -280,14 +280,14 @@ Worked on condensing the repetitive part (see below). I was thinking of having 
 ## Week 4
 
 ### Day 15
-Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) on the same part as on Day 14. Furthermore started with sketching out an idea on how to get rid of the duplicated lines 205-226 === 296-307 (see below). However, have not started with implementing the latter but will hope to be able to do so tomorrow. Finally, I have spent some time to get the language server (LSP) working with `~littel-wolfur` helping me once more, again, thx for your time!
+Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) on the same part as on Day 14. Furthermore started with sketching out an idea on how to get rid of the duplicated lines 205-226 === 296-307 (see below). However, have not started with implementing the latter but will hope to be able to do so tomorrow. Finally, I have spent some time to get the language server (LSP) working with `~littel-wolfur` helping me once more, again, thx for your time!
 #### CT:
-- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) refactoring
+- Continued with implementation of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) refactoring
 - Fixing language server in VScode
 - Sketching out idea for further refactoring tasks
 
 #### TDT:
-- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon)
+- Finish implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
 ```
 =/  keypair        (~(got by keys.state) from.act)
       =/  =egg:smart
@@ -313,20 +313,154 @@ Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ma
 ```
 
 ### Day 16
-What an absolute amazing day today has been! I was able to get the hoon-language-server working, finally! Yeah, I might have spent the whole day figuring out some LSP stuff, but in the end I now have a working language server for wallet.hoon which will definitely help me with my future coding tasks! While configuring I also quickly read the [mill-explainer](https://gist.github.com/dr-frmr/6d3a19f77ae87f7c21c5c3b9486fbe77) by `~hodzod-walrus` which helped to clear some questions.
+What an absolute amazing day today has been! I was able to get the hoon-language-server working, finally! Yeah, I might have spent the whole day figuring out some LSP stuff, but in the end I now have a working language server for [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) which will definitely help me with my future coding tasks! While configuring I also quickly read the [mill-explainer](https://gist.github.com/dr-frmr/6d3a19f77ae87f7c21c5c3b9486fbe77) by `~hodzod-walrus` which helped to clear some questions.
 #### CT:
 - Finished (!) language server setup in VScode, thx `~littel-wolfur`
 - Read through [mill-explainer](https://gist.github.com/dr-frmr/6d3a19f77ae87f7c21c5c3b9486fbe77) by `~hodzod-walrus`
 
 #### TDT:
-- Work on implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) again
+- Work on implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) again
 
 ### Day 17
-I got rid of the syntax errors in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) and finished condensing the part from the day before yesterday. Furthermore, I started with eliminating the duplicated lines 205-226 === 296-307 but am not finished yet. The [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) now works as described in the [draft PR](https://github.com/uqbar-dao/ziggurat/pull/96). What still needs to be done is the last fragment of duplicated code, lines 200-203 === 253-257, and the keypair part.
+I got rid of the syntax errors in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) and finished condensing the part from the day before yesterday. Furthermore, I started with eliminating the duplicated lines 205-226 === 296-307 but am not finished yet. The [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) now works as described in the [draft PR](https://github.com/uqbar-dao/ziggurat/pull/96). What still needs to be done is the last fragment of duplicated code, lines 200-203 === 253-257, and the keypair part.
 #### CT:
 - Finished condensing the `=+  egg-hash=(hash-egg egg.p)` part
 - [Third commit](https://github.com/uqbar-dao/ziggurat/pull/96/commits/4cc60ce7da4bd055eb7dbcdd36d7b6ca0c6ae99e)
 - [Fourth commit](https://github.com/uqbar-dao/ziggurat/pull/96/commits/671d588f3ec5f4ab2357a2e51a61545af94636cd)
 
 #### TDT:
-- Work out implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/master/app/wallet.hoon) for `=/  keypair        (~(got by keys.state) from.act)`
+- Work out implemetation in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) for `=/  keypair        (~(got by keys.state) from.act)`
+
+### Day 18
+Worked on implementing the `=/  keypair        (~(got by keys.state) from.act)` refactoring and was able to eliminate quite a lot of redundant code in my [fifth commit](https://github.com/uqbar-dao/ziggurat/commit/35972b28456d6ec1307a295290e3f43ddb2741e0). The submit-tx arm was renamed to process-tx, since it now also handles the egg, yolk, etc... I was also able to clear the find errors in my [sixth commit](https://github.com/uqbar-dao/ziggurat/commit/73c01d6bebc42cd6b3cac4c12caaf557fe9efa4a), however, line 113 throws a type-mismatch error (see below).
+#### CT:
+- Worked on condensing the `=/  keypair        (~(got by keys.state) from.act)` part
+- [Fifth commit](https://github.com/uqbar-dao/ziggurat/commit/35972b28456d6ec1307a295290e3f43ddb2741e0)
+- [Sixth commit](https://github.com/uqbar-dao/ziggurat/commit/73c01d6bebc42cd6b3cac4c12caaf557fe9efa4a)
+
+#### TDT:
+- Resolve error in [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) line 113
+
+Error line 113:
+```
+- need
+?(
+  %~
+  [   n
+    [ p=@ux
+        q
+      [   egg
+        [   p
+          [ from=?([id=@ux nonce=@ud zigs=@ux] @ux)
+            sig=[v=@ r=@ s=@]
+            eth-hash=u(@)
+            to=@ux
+            rate=@ud
+            budget=@ud
+            town-id=@ux
+            status=@ud
+          ]
+            q
+          [ caller=?([id=@ux nonce=@ud zigs=@ux] @ux)
+            args=u(*)
+            my-grains=nlr(@ux)
+            cont-grains=nlr(@ux)
+          ]
+        ]
+          args
+        ?(
+          [%custom args=@t]
+          [%give salt=@ to=@ux amount=@ud]
+          [%give-nft salt=@ to=@ux item-id=@ud]
+        )
+      ]
+    ]
+      l
+    nlr(
+      [ p=@ux
+          q
+        [   egg
+          [   p
+            [ from=?([id=@ux nonce=@ud zigs=@ux] @ux)
+              sig=[v=@ r=@ s=@]
+              eth-hash=u(@)
+              to=@ux
+              rate=@ud
+              budget=@ud
+              town-id=@ux
+              status=@ud
+            ]
+              q
+            [ caller=?([id=@ux nonce=@ud zigs=@ux] @ux)
+              args=u(*)
+              my-grains=nlr(@ux)
+              cont-grains=nlr(@ux)
+            ]
+          ]
+            args
+          ?(
+            [%custom args=@t]
+            [%give salt=@ to=@ux amount=@ud]
+            [%give-nft salt=@ to=@ux item-id=@ud]
+          )
+        ]
+      ]
+    )
+      r
+    nlr(
+      [ p=@ux
+          q
+        [   egg
+          [   p
+            [ from=?([id=@ux nonce=@ud zigs=@ux] @ux)
+              sig=[v=@ r=@ s=@]
+              eth-hash=u(@)
+              to=@ux
+              rate=@ud
+              budget=@ud
+              town-id=@ux
+              status=@ud
+            ]
+              q
+            [ caller=?([id=@ux nonce=@ud zigs=@ux] @ux)
+              args=u(*)
+              my-grains=nlr(@ux)
+              cont-grains=nlr(@ux)
+            ]
+          ]
+            args
+          ?(
+            [%custom args=@t]
+            [%give salt=@ to=@ux amount=@ud]
+            [%give-nft salt=@ to=@ux item-id=@ud]
+          )
+        ]
+      ]
+    )
+  ]
+)
+- have
+[ [ @ux
+    [   p
+      [ from=?([id=@ux nonce=@ud zigs=@ux] @ux)
+        sig=[v=@ r=@ s=@]
+        eth-hash=u(@)
+        to=@ux
+        rate=@ud
+        budget=@ud
+        town-id=@ux
+        status=@ud
+      ]
+        q
+      [ caller=?([id=@ux nonce=@ud zigs=@ux] @ux)
+        args=u(*)
+        my-grains=nlr(@ux)
+        cont-grains=nlr(@ux)
+      ]
+    ]
+    *
+  ]
+  %~
+  %~
+]
+```
