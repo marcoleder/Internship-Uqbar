@@ -464,3 +464,14 @@ Error line 113:
   %~
 ]
 ```
+
+## Week 5
+
+### Day 19
+Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) on the error from yesterday. Have found the root cause of the problem (the yolk) but was not yet able to solve it. Ended up stashing my changes as matters only got worse and I kindof lost track of what I did, but I guess that's part of the learning process / debugging. Will have to check in tomorrow with someone from the team who can help me and knows how to hoon around ;)
+#### CT:
+- Continued with error fixing of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
+- Switched from pure ubuntu to zorin OS
+
+#### TDT:
+- Resolve error
