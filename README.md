@@ -475,3 +475,11 @@ Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml
 
 #### TDT:
 - Resolve error
+
+### Day 20
+Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) on the error from yesterday. Was sadly not able to fix it, don't know how to solve.. meet tomorrow @10AM ET with `~hodzod-walrus`
+#### CT:
+- Continued with error fixing of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
+
+#### TDT:
+- Resolve error
