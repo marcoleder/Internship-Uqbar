@@ -483,3 +483,14 @@ Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml
 
 #### TDT:
 - Resolve error
+
+### Day 21
+Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) on the error from yesterday. Sat together with `~hodzod-walrus` for a short debugging session, he was able to fix some of the issues. Remaining issues will be solved by me tomorrow, but so far its looking more or less okay-ish, the nest-fail is gone. I had to revert (see [Commit 8](https://github.com/uqbar-dao/ziggurat/commit/43e43ea797a8be12b57e821c2d4f6d31574034d5)) the changes from today (see [commit 7](https://github.com/uqbar-dao/ziggurat/commit/6fe96b5d5c89211d522af1afe8246313cfe3f7fd)) though and will reconstruct them piece by piece, such that any small mistakes can be cleared on the go and not have to be fixed all at once in the end.
+#### CT:
+- Continued with error fixing of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
+- [Commit 7](https://github.com/uqbar-dao/ziggurat/commit/6fe96b5d5c89211d522af1afe8246313cfe3f7fd)
+- [Commit 8](https://github.com/uqbar-dao/ziggurat/commit/43e43ea797a8be12b57e821c2d4f6d31574034d5)
+
+#### TDT:
+- Resolve error
+- Reconstruct bugfixes from today
