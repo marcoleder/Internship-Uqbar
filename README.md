@@ -493,4 +493,14 @@ Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml
 
 #### TDT:
 - Resolve error
-- Reconstruct bugfixes from today
+
+### Day 22
+Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) on the find.$.+2 error from yesterday. Issue remains and will need to be solved by me tomorrow. No luck today, hence started to take a look at wallet-ui and the issues from yaseen. Also participated in the dev call Holium OS.
+#### CT:
+- Continued with error fixing of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
+- Looked at wallet-ui issues & code
+- Dev call Holium OS
+
+#### TDT:
+- Resolve error
+- Reconstruct the bug fixes from `~hodzod-walrus`
