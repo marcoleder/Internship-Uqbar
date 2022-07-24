@@ -504,3 +504,14 @@ Continued working on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml
 #### TDT:
 - Resolve error
 - Reconstruct the bug fixes from `~hodzod-walrus`
+
+### Day 23
+Woops, forgot to post and push the update for friday, so here we go: I reconstructed some of the inputs and improvements from `~hodzod-walrus` and whilst going over the code again noticed, that we may have had a misunderstanding when working on the code together. I think we went too fast at the parameters of the gate in the process-tx arm, hence I will try to solve this tomorrow morning. What I now get is again a nest-fail, but this time regarding the indexer.
+#### CT:
+- Continued with error fixing of [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon)
+- [Commit 9](https://github.com/uqbar-dao/ziggurat/commit/adde81e21a65a7bb0e0c4f738d02deed5d440905)
+
+#### TDT:
+- Work on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) parameter list of process-tx
+- Meet with `~sipfyn-pidmex` for wallet-ui
+- Process issues in wallet-ui
