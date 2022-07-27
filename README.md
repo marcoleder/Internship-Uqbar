@@ -515,3 +515,36 @@ Woops, forgot to post and push the update for friday, so here we go: I reconst
 - Work on [wallet.hoon](https://github.com/uqbar-dao/ziggurat/blob/ml/wallet-refactor/app/wallet.hoon) parameter list of process-tx
 - Meet with `~sipfyn-pidmex` for wallet-ui
 - Process issues in wallet-ui
+
+## Week 6
+
+### Day 24
+Tried to reconstruct the changes from `~hodzod-walrus` but still ran into errors. In the afternoon `~hodzod-walrus` wrote me that my changes do not seem to reduce complexity, at least concerning the most recent addition of the ++process-tx arm. We came to the conclusion that in favor of time and the upcoming assembly it would be best to stash the changes and only incorporate the give and give-nft improvements for now.
+#### CT:
+- Continued bugfixing of `~hodzod-walrus`'s changes
+- Stashed changes in order to finalize the PR merge
+
+#### TDT:
+- Finalize wallet.hoon such that PR can be merged
+
+### Day 25
+Before polishing wallet.hoon I copied the most recent changes from `tacryt-socryp` to my branch in order to minimize merge conflicts. I then went on and implemented the give & give-nft improvements from the [bugfixing commit](https://github.com/uqbar-dao/ziggurat/commit/6fe96b5d5c89211d522af1afe8246313cfe3f7fd) with `~hodzod-walrus` and resolved the merge conflicts in order to make the draft-PR into a ready-to-merge-PR. Lastly, I implemented the requested refinements by `~hodzod-walrus` after his review and then finally merged the PR into master.
+#### CT:
+- [Commit 10](https://github.com/uqbar-dao/ziggurat/commit/c54a447f03ca776d1aa75162b69cc6f7f0b5bf9a), copy changes
+- [Commit 11](https://github.com/uqbar-dao/ziggurat/commit/38f8a386ad1292256d621d011ceee253569bd03a), implement give & give-nft
+- [Commit 12](https://github.com/uqbar-dao/ziggurat/commit/570b74ec7518190df170c3de40be70da81ac9954), resolve merge conflicts
+- [Commit 13](https://github.com/uqbar-dao/ziggurat/commit/795a10189995d4a7fa9947cdd973598ab5fa1682), implement requested changes
+
+#### TDT:
+- I will now hand off wallet.hoon to `~hodzod-walrus` and spend my time and focus on finding the most efficient data structure for L1 Ethereum data availability.
+
+### Day 26
+The first day researching Merkle trees, sparse Merkle trees, and red-black trees went well so far. I gathered different resources and am working on a document comparing the different approaches in order to conduct an informed decision with the uqbar team. Also contacted `tacryt-socryp` about his prior research in December and `~hodzod-walrus` for sources. Got [source 1](https://github.com/uqbar-dao/ziggurat/blob/master/lib/merk.hoon) and [source 2](https://ethresear.ch/t/optimizing-sparse-merkle-trees/3751/20)
+#### CT:
+- started Merkle (&sparse), red-black tree research
+- Chatted with `~hodzod-walrus` & `tacryt-socryp`
+
+#### TDT:
+- Complete PDF
+- Find more sources
+- Get to know alternative data structs
